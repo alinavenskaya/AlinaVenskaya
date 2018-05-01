@@ -1,0 +1,547 @@
+
+#Menu {
+    height: 15vh;
+    background-color: #99cd4e;
+}
+.bg-light{
+     background-color: #99cd4e !important;
+}
+/*Свойства логотипа*/
+.logo {
+    height: 11vh;
+    width: auto;
+    padding: 2vh;
+}
+/*Расположение меню справа от логитипа*/
+.menu-main {
+    list-style: none;
+    float: right;
+    padding-right: 15vh;
+}
+/*Изменение цвета меню при наведении на ссылку*/
+.menu-main a:hover {
+    background-color: rgba(225, 225, 225, 0.55);
+}
+/*Параметры пунктов меню*/
+.menu-main li {
+    display: inline-block;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16pt;
+}
+/*Параметры ссылок в меню*/
+.menu-main a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    line-height: 14.5vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    letter-spacing: 1px;
+    color: #343434;
+    transition: 0.5s linear;
+}
+/*Поведение ссылок в меню после отведения */
+.menu-main a:after {
+    content: "";
+    position: absolute;
+    background: rgba(225, 225, 225, 0.2);
+    width: 100%;
+    bottom: 0;
+    height: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-transition: height 0.25s;
+    -moz-transition: height 0.25s;
+    -ms-transition: height 0.25s;
+    -o-transition: height 0.25s;
+    transition: height 0.25s;
+}
+/*
+.menu-main a:hover:after {
+    height: 100%;
+}
+*/
+/*Поведение объектов при ширине экрана меньше 660*/
+@media (max-width: 660px) {
+    .menu-main {
+        float: none;
+        padding-top: 20px;
+    }
+    .top-menu {
+        text-align: center;
+        padding: 20px 0 0 0;
+    }
+    .menu-main a {
+        padding: 0 10px;
+    }
+}
+/*Поведение объектов при экране меньше 600*/
+@media (max-width: 600px) {
+    .menu-main li {
+        display: block;
+    }
+    .email a {
+        display: block;
+    }
+    .icon_1 i,
+    .icon_2 i {
+        display: block;
+    }
+}
+/*Параметры блока с изображениями на домашней странице*/
+
+/*Параметры блока заголовков на домашней странице*/
+.home {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding-top: 10vh;
+}
+/*Параметры кнопок на странице*/
+.home a,
+.about_design a {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(52, 52, 52, 0.45);
+    border: 2px solid #343434;
+    padding: 8px 22px 8px 22px;
+}
+/*Параметры кнопок на странице при наведении*/
+.home a:hover, .about_design a:hover {
+    color: #343434;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/*Параметры раздела О дизайне*/
+.about_design {
+    text-align: justify;
+    padding-top: 20%;
+    height: 100vh;
+    background-color: #99cd4e;
+}
+/*Параметры резинового блока*/
+.wrapper {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+/*Параметры описания раздела О дизайне*/
+.design {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 215px;
+    margin-top: 7vh;
+    width: 68%;
+    height: auto;
+    padding-bottom: 7vh;
+    padding-left: 30px;
+}
+/*Параметры изображения в блоке О дизайне*/
+.about_design img {
+    margin-left: 10vh;
+    width: 80%;
+    height: auto;
+    float: left;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+}
+/*Параметры кнопки Посмотреть наши работы*/
+.about_design a {
+    text-align: center;
+    margin-left: 40%;
+    margin-right: auto;
+}
+/*Параметры блока Портфолио*/
+.portfolio {
+    background: linear-gradient(to bottom, #99cd4e, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #99cd4e);
+}
+/*Параметры потекшей краски*/
+.kraska {
+    position: absolute;
+    z-index: 2;
+}
+/*Параметры блока Портфолио*/
+#portfolio {
+    position: relative;
+    z-index: 2;
+    text-align: justify;
+}
+/*Параметры описания раздела*/
+.port {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7vh;
+    width: 68%;
+    height: auto;
+    padding-bottom: 7vh;
+}
+/*Параметры блока с графической навигацией */
+.job {
+    padding-bottom: 7vh;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+
+}
+/*
+Параметры 
+.center {
+    text-align: center;
+}
+*/
+/*Параметры блока затемнения*/
+.center.absolute {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15, .68);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 100;
+    -webkit-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out
+}
+/*Параметры названия изображений графической навигации*/
+.card-name {
+    color: #fff;
+    position: absolute;
+    font-size: 18pt;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 100;
+    text-transform: uppercase;
+    text-align: center
+}
+/*Параметры ссылок*/
+.card {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+}
+/*Параметры изображений при наведении*/
+.card:hover .image {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+/*Параметры блока затемнения после наведения*/
+.card:hover .center.absolute {
+    background-color: rgba(15, 15, 15, 0)
+}
+
+.image {
+    position: relative;
+    z-index: 2;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 200px;
+    width: 365px;
+    -webkit-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+
+}
+
+.card img {
+    border: 5px solid #99cd4e;
+}
+
+.card:hover p {
+    color: #000000;
+    font-weight: bold;
+    font-size: 18pt;
+    background-color: #e1e1e1;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.team {
+    background-color: #99cd4e;
+    text-align: justify;
+
+}
+
+.about_kom {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7vh;
+    width: 68%;
+    height: auto;
+    padding-bottom: 7vh;
+}
+
+.image-circle {
+    -webkit-border-radius: 54vh;
+    border-radius: 54vh;
+    width: 45vh;
+    height: 45vh;
+    overflow: hidden;
+    border: 0.5vh solid #343434;
+    position: relative;
+    z-index: 1;
+}
+
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.descr1 {
+    display: none;
+    border: 0.3vh solid #343434;
+    border-radius: 25px;
+    border-top-right-radius: 0px;
+    margin-left: -170px;
+    padding: 10px;
+    margin-top: 210px;
+    background: radial-gradient(rgba(153, 205, 78, 0.85), rgba(225, 225, 225, 0.9));
+    width: 300px;
+    height: auto;
+    -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 9999;
+}
+
+.descr2 {
+    display: none;
+    border: 0.3vh solid #343434;
+    border-radius: 25px;
+    border-top-right-radius: 0px;
+    margin-left: -215px;
+    padding: 10px;
+    margin-top: 185px;
+    background: radial-gradient(rgba(153, 205, 78, 0.85), rgba(225, 225, 225, 0.9));
+    width: 350px;
+    height: auto;
+    -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 9999;
+}
+
+.descr3 {
+    display: none;
+    border: 0.3vh solid #343434;
+    border-radius: 25px;
+    border-top-right-radius: 0px;
+    margin-left: -170px;
+    padding: 10px;
+    margin-top: 200px;
+    background: radial-gradient(rgba(153, 205, 78, 0.85), rgba(225, 225, 225, 0.9));
+    width: 350px;
+    height: auto;
+    -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 9999;
+}
+
+.personal-card1:hover .descr1,
+.personal-card2:hover .descr2,
+.personal-card3:hover .descr3 {
+    display: block;
+    position: absolute;
+    height: auto;
+}
+
+.personal-card1,
+.personal-card2,
+.personal-card3 {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    padding: 2vh;
+}
+
+.design_center {
+    text-align: center;
+    font-weight: bold;
+}
+
+.dol {
+    text-align: center;
+    padding-top: 2vh;
+}
+
+.form {
+    height: 100vh;
+    background: linear-gradient(to bottom, #99cd4e, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1);
+    padding-bottom: 7vh;
+}
+
+.kraska2 {
+    right: 0%;
+    position: absolute;
+    z-index: 1;
+}
+
+#form_klient {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+form {
+    margin-top: 5vh;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+input,
+textarea {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    width: 50%;
+    margin: 2vh;
+    font-family: 'Georgia';
+    font-size: 16pt;
+    border: none;
+    border-bottom: 1px solid #343434;
+    background: rgba(225, 225, 225, 0);
+    outline: none;
+    transition: border-color 1s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-bottom: 1px solid #99cd4e;
+}
+
+/*
+button {
+    text-align: center;
+    width: 40%;
+    margin: 2vh;
+    font-family: 'Georgia';
+    font-size: 14pt;
+    color: #343434;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 2px solid #343434;
+    padding: 8px 22px 8px 22px;
+}
+*/
+
+button:hover {
+    color: #fff;
+    background-color: rgba(52, 52, 52, 0.45);
+}
+
+.maps {
+    width: 100%;
+    height: 75vh;
+}
+
+footer {
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+    background: linear-gradient(to bottom, #99cd4e, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #e1e1e1, #99cd4e);
+    border: 2px solid #99cd4e;
+    width: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-around;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #343434;
+    padding: 10px;
+}
+
+footer a:hover {
+    color: #99cd4e;
+    text-decoration: underline;
+
+}
+
+.icon_1 i,
+.icon_2 i {
+    font-size: 5vh;
+    padding: 10px;
+    color: #99cd4e;
+    text-shadow: 1px 1px 1px black;
+}
+
+.icon_1 i:hover {
+    text-shadow: 0px 0px 0px #000;
+    cursor: pointer;
+    padding-left: 12px;
+    margin-right: -2px;
+}
+
+.icon_2 i:hover {
+    text-shadow: 0px 0px 0px #000;
+    cursor: pointer;
+    padding-right: 12px;
+    margin-left: -2px;
+}
+
+.email {
+    display: inline-block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
