@@ -204,7 +204,7 @@
         });
         $('.nav-link').on('click', function () {
 //            $('.navbar-toggler').click() //bootstrap 3.x by Richard
-                $('.nav-collapse').collapse('hide');
+                $('.navbar-collapse').collapse('hide');
           /*  alert('test');*/
         });
         var roomName = ['Livingroom', 'Kitchen', 'Bathroom', 'Sleepingroom', 'Childrenroom', 'Cabinet'];
