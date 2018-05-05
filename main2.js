@@ -75,6 +75,15 @@
 
                         var mixer = mixitup('.mixitup');
                         $('#dn').click();
+                        	$('.image-popup-vertical-fit').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		mainClass: 'mfp-img-mobile',
+		image: {
+			verticalFit: true
+		}
+		
+	});
                     }
                 })
                 $.ajax({
@@ -138,6 +147,15 @@
 
                     var mixer = mixitup('.mixitup');
                     $('#dn').click();
+                    	$('.image-popup-vertical-fit').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		mainClass: 'mfp-img-mobile',
+		image: {
+			verticalFit: true
+		}
+		
+	});
                 }
             })
             $.ajax({
@@ -185,33 +203,41 @@
 
     }
     $(document).ready(function () {
-        smoothTransition();
-        var mixer = mixitup('.mixitup');
-        $("#dn").click();
-        $(".owl-carousel").owlCarousel({
-            loop: true,
-            dots: true,
-            nav: true,
-            navText: ["", ""],
-            responsive: {
-                600: {
-                    items: 1
-                },
-                200: {
-                    items: 1
+                smoothTransition();
+                var mixer = mixitup('.mixitup');
+                $("#dn").click();
+                $(".owl-carousel").owlCarousel({
+                    loop: true,
+                    dots: true,
+                    nav: true,
+                    navText: ["", ""],
+                    responsive: {
+                        600: {
+                            items: 1
+                        },
+                        200: {
+                            items: 1
+                        }
+                    }
+                });
+                $('.nav-link').on('click', function () {
+                    //            $('.navbar-toggler').click() //bootstrap 3.x by Richard
+                    $('.navbar-collapse').collapse('hide');
+                    /*  alert('test');*/
+                });
+                var roomName = ['Livingroom', 'Kitchen', 'Bathroom', 'Sleepingroom', 'Childrenroom', 'Cabinet'];
+                for (name in roomName) {
+                    ajLoad(roomName[name], true);
+                    if (document.location.href.slice(-(roomName[name].length)) == roomName[name]) {
+                        ajLoad(roomName[name], false);
+                    }
                 }
-            }
-        });
-        $('.nav-link').on('click', function () {
-//            $('.navbar-toggler').click() //bootstrap 3.x by Richard
-                $('.navbar-collapse').collapse('hide');
-          /*  alert('test');*/
-        });
-        var roomName = ['Livingroom', 'Kitchen', 'Bathroom', 'Sleepingroom', 'Childrenroom', 'Cabinet'];
-        for (name in roomName) {
-            ajLoad(roomName[name], true);
-            if (document.location.href.slice(-(roomName[name].length)) == roomName[name]) {
-                ajLoad(roomName[name], false);
-            }
-        }
-    });
+                $('.image-popup-vertical-fit').magnificPopup({
+                    type: 'image',
+                    closeOnContentClick: true,
+                    mainClass: 'mfp-img-mobile',
+                    image: {
+                        verticalFit: true
+                    }
+                });
+                });
